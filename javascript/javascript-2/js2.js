@@ -1,20 +1,32 @@
-function promiseReduce(asyncFunctions, reduce, initialValue) {    
+function getPath(elem) {
 
-    asyncFunctions.map((fn) => {
-        return fn().then(data => {
-            return reduce(data, initialValue)  
-        }).then(data2 => { console.log('data2:', data2);});
-    })
+    let path = '';
+    while(elem.parentNode && elem.nodeName.toLowerCase() != 'html') {
+    
+        path += elem.nodeName.toLowerCase();
+        //get class
+        if (elem.className) {
+            path += '.' + elem.className.replaceAll(' ', '.');
+        } 
+        //get id
+        if (elem.id) {
+            path += '#' + elem.id + ' ';
+        } else {  
+        
+            var el = elem, nth = 1;
+            while (el = el.previousElementSibling) {
+                if (el.nodeName.toLowerCase() == elem.nodeName.toLowerCase())
+                nth++;
+            }
+            if (nth != 1)
+            path += ":nth-of-type("+nth+")";
 
+            path += ' ';
+        }
+
+        elem = elem.parentNode;
+    }
+    rez = path.trim().split(' ').reverse().join(' ');
+    return rez;
 }
 
-const fn1 = () => {
-    console.log('fn1');
-    return Promise.resolve(1)
-}
-
-const fn2 = () => new Promise(resolve => {
-    console.log('fn2')  
-    setTimeout(() => resolve(2), 1000)
-})
- promiseReduce([fn1, fn2], (memo, value) => memo * value, 2);
