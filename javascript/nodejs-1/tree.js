@@ -38,4 +38,5 @@ const getFiles = (dir, done) => {
 getFiles(process.argv[2], (err, results) => {
     if (err) throw err;
     console.log(results);
+
 });
