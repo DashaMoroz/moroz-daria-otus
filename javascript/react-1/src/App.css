@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: "Open Sans", serif;
+}
+
+.wrapper {
+    margin-top: 50px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    /*background-image: url("./public/clouds.jpeg");*/
+
+    /*background: rgba(45,176,224,1);
+    background: -moz-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+
+    background: -webkit-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    background: linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db0e0', endColorstr='#6028a8');*/
+
+}
+
+.main{
+    height: 70vh;
+    box-shadow: 0px 2px 80px -20px rgba(0,0,0,0.2);
+    border-radius: 10px; /* Радиус границ*/
+    width: 85%;
+    margin: 0 auto;
+    opacity: 0.7;
+    background-image: url("./public/cloud.jpeg");
+}
+
+.header {
+    background: aliceblue;
+    border-radius: 2px;
+    border-color: #2a6bb1;
+}
+
+H1 {
+    text-shadow:
+            -1px -1px #FFF,
+            -2px -2px #FFF,
+            -1px 1px #FFF,
+            -2px 2px #FFF,
+            1px 1px #FFF,
+            2px 2px #FFF,
+            1px -1px #FFF,
+            2px -2px #FFF,
+            -3px -3px 2px #BBB,
+            -3px 3px 2px #BBB,
+            3px 3px 2px #BBB,
+            3px -3px 2px #BBB;
+    color: steelblue;
+    transition: all 1s;
+    margin-top: 10px;
+}
+
+H1:hover {
+    color: yellowgreen;
+}
+
+.Box {
+
+    background-color: #ffffff; /* Фоновый цвет*/
+    border: 2px solid #D4D4D4; /* Ширина и цвет границ*/
+    border-radius: 10px; /* Радиус границ*/
+    box-shadow: 0 0 15px #A9A9A9; /* Размер и цвет тени блока*/
+
+}
+p {
+    margin: 10px;
+}
+
+table {
+    margin-top: 35px;
+}
+.error {
+
+}
