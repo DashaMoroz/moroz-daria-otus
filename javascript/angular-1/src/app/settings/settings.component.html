@@ -1,0 +1,29 @@
+<div>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-select placeholder="Язык" [(value)]="selectedLanguage">
+        <mat-option *ngFor="let language of languages" [value]="language" >
+          {{language}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Кол-во слов" [(value)]="selectedLevel">
+        <mat-option *ngFor="let level of levels" [value]="level">
+          {{level}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>
+      Настройки:
+    </p>
+    <p>
+      язык: {{selectedLanguage}} / кол-во слов: {{selectedLevel}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button class="btn-ok">Сохранить</button>
+    <button mat-stroked-button class="btn-cancel">Сбросить</button>
+  </mat-card-actions>
+</div>
+

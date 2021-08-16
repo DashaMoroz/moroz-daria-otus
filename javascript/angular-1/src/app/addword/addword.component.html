@@ -1,0 +1,46 @@
+<section>
+  <header>
+    словарь:
+    <hr />
+  </header>
+  <main>
+
+        <span>
+          <strong>1 яблоко - apple</strong>
+          <button mat-stroked-button class="btn-del">Удалить</button>
+        </span>
+
+        <span>
+          <strong>2 манго - mango</strong>
+          <button mat-stroked-button class="btn-del">Удалить</button>
+        </span>
+
+
+  </main>
+  <hr />
+  <footer>
+    <form [formGroup]="form">
+      <div class="list">
+        <input matInput type="text" formControlName="title" placeholder="введите слово">
+        <input matInput type="text" value="{{ worttranslet }}" placeholder="перевод слова" readonly>
+      </div>
+      <div class="list">
+        <button
+          (click)="translation()"
+          mat-stroked-button
+          class="btn-rep"
+          [disabled]="form.invalid">Перевести слово
+        </button>
+      </div>
+      <div class="list">
+        <button
+          (click)="submit()"
+          mat-stroked-button
+          class="btn-add"
+          [disabled]="form.invalid">Добавить слово в словарь
+        </button>
+      </div>
+
+    </form>
+  </footer>
+</section>
