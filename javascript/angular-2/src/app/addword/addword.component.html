@@ -1,0 +1,56 @@
+<section>
+  <header>
+    <h5>добавить слово в словарь</h5>
+    <hr />
+  </header>
+  <footer>
+    <form [formGroup]="form">
+      <div class="list">
+        <input  type="text" formControlName="title" placeholder="введите слово">
+        <input  type="text" value="{{ wordtranslet }}" placeholder="перевод слова" readonly>
+      </div>
+      <div class="list">
+        <button
+          (click)="translation()"
+          mat-stroked-button
+          class="btn-rep"
+          [disabled]="form.invalid">Перевести слово
+        </button>
+      </div>
+      <div class="list">
+        <button
+          (click)="submit()"
+          mat-stroked-button
+          class="btn-add"
+          [disabled]="form.invalid">Добавить слово в словарь
+        </button>
+      </div>
+    </form>
+  </footer>
+  <hr />
+  <h5>словарь</h5>
+  <div class="list">
+    <button
+      (click)="hideVocab()"
+      mat-stroked-button
+      class="btn-sh"> {{ vocabHideShow }}
+    </button>
+    <button
+      (click)="hideVocab()"
+      mat-stroked-button
+      class="btn-del-all">Очистить словарь
+    </button>
+  </div>
+  <br />
+  <main>
+
+        <span *ngFor="let words of newWords">
+          <strong>{{words.word}}</strong>
+          <button
+            (click)="removeWord(words.id)"
+            mat-stroked-button
+            class="btn-del">Удалить</button>
+        </span>
+
+  </main>
+</section>

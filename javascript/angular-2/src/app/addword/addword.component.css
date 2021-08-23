@@ -1,0 +1,66 @@
+section {
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-top: 10px;
+  padding: 1rem;
+  width: 80%;
+}
+  header {
+    margin-bottom: 1rem;
+  }
+
+input {
+  width: 100%;
+  display: flex;
+  padding: 12px 20px;
+  margin: 2px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.btn-add {
+  width: 100%;
+  color: green;
+  margin: 2px;
+}
+.btn-rep {
+  width: 100%;
+  color: blue;
+  margin: 2px;
+}
+.btn-sh {
+  width: 100%;
+  color: goldenrod;
+  margin: 2px;
+}
+span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: .5rem;
+}
+.btn-del-all {
+  width: 100%;
+  color: red;
+  margin: 2px;
+}
+span .btn-del {
+  color: red;
+}
+.task {
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: .5rem;
+}
+.list {
+  display: flex;
+}
+
+mat-form-field {
+  margin: 2px;
+  width: 100%;
+}
