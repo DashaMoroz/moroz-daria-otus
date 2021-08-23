@@ -1,0 +1,35 @@
+
+div {
+  box-sizing: content-box;
+  background-color: lightgray;
+  text-align: center;
+}
+
+H1 {
+  text-shadow:
+    -1px -1px #FFF,
+    -2px -2px #FFF,
+    -1px 1px #FFF,
+    -2px 2px #FFF,
+    1px 1px #FFF,
+    2px 2px #FFF,
+    1px -1px #FFF,
+    2px -2px #FFF,
+    -3px -3px 2px #BBB,
+    -3px 3px 2px #BBB,
+    3px 3px 2px #BBB,
+    3px -3px 2px #BBB;
+  color: steelblue;
+  transition: all 1s;
+
+  margin: 0;
+  padding: 1em 1em 0.5em 0;
+}
+
+H1:hover {
+  color: yellowgreen;
+}
+
+
+
+
