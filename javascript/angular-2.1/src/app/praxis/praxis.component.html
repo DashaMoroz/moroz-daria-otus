@@ -1,0 +1,50 @@
+<section>
+  <header>
+    <h5>практика по запоминанию слов</h5>
+    <hr />
+  </header>
+  <main>
+    <span>
+       <em>Результат: {{ resultMessage }} </em>
+    </span>
+    <hr />
+    <input
+      [value]="wordOrigin"
+      matInput type="text"
+      placeholder="нажмите кнопку Начать"
+      readonly>
+  </main>
+  <footer>
+    <form [formGroup]="form">
+      <div class="list">
+        <input
+          formControlName="userAnswer"
+          matInput type="text"
+          placeholder="введите перевод слова">
+      </div>
+      <div class="list">
+        <button
+          (click)="start()"
+          [disabled]="disableButStart"
+          mat-stroked-button
+          class="btn-start"
+        > Начать
+        </button>
+        <button
+          (click)="nextWord()"
+          [disabled]="disableButAnswer"
+          mat-stroked-button
+          class="btn-answer"
+        > Ответить
+        </button>
+        <button
+          (click)="stop()"
+          [disabled]="disableButStop"
+          mat-stroked-button
+          class="btn-stop"
+        > Сбросить
+        </button>
+      </div>
+    </form>
+  </footer>
+</section>
